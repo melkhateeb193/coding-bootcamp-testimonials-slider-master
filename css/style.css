@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: 'Inter', sans-serif;;
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.125rem;
+    font-family: var(--font-family);
+    background-image: url(../images/pattern-bg.svg), url(../images/pattern-curve.svg);
+    background-position: right, left bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    background-image: url(../images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: 60px top;
+    position: relative;
+}
+
+.textContainer {
+    position: absolute;
+    left: 0;
+    top: 10rem;
+    z-index: 1111;
+}
+
+h1 {
+  font-size: 2rem;
+    width: 60%;
+}
+
+.spanP {
+    color: var(--Grayish-Blue);
+}
+
+p {
+    color: var(--Dark-Blue);
+    font-weight: 700;
+}
+
+.sliderDiv {
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    box-shadow: 2px 4px 10px 1px; 
+}
+
+.previous,
+.next {
+    cursor: pointer;
+}
+
+.imgContainer {
+    position: relative;
+}
+
+.sliderDiv {
+    position: absolute;
+    bottom: -1rem;
+    left: 5rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+    body {
+      background-position: top, bottom;
+      background-size: 30rem , contain;
+      padding: 20px;
+    }
+
+    #container {
+      background-position: top;
+    }
+
+    .textContainer {
+        top: 5rem;
+        position: static !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    #container{
+      flex-direction: column-reverse;
+    }
+    h1 {
+       width: 80%;
+    }
+
+    .sliderDiv {
+        bottom: -2rem;
+        left: 2rem;
+    } 
+    .imgCont{
+      width: 100%;
+    }
+    .sliderDiv {
+      left: 10rem  !important;
+    }
+}
